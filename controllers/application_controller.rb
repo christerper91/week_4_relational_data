@@ -40,6 +40,11 @@ class ApplicationController < Sinatra::Base
   end
 
   post '/edit/:item_id' do
-
+    item = Item.all
+    if item.update
+      redirect "/add-items/#{product.id}"
+    else
+      "sorry there was an error"
+    end
   end
 end

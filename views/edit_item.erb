@@ -1,6 +1,6 @@
 <form action="/edit/<%= @item.id %>" method="post">
-  <input type="text" name="item[name]" placeholder="item name" >
-  <input type="text" name="item[qty]" placeholder="qty" >
-  <input type="text" name="item[unit_price]" placeholder="unit price" >
+  <input type="text" name="item[name]" placeholder=<%= @item.name%> >
+  <input type="text" name="item[qty]" placeholder=<%= @item.qty%> >
+  <input type="text" name="item[unit_price]" placeholder=<%= @item.unit_price%> >
   <input class="btn btn-blue" type="submit"  value="update item">
 </form>
