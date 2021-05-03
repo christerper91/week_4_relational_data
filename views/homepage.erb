@@ -1,0 +1,13 @@
+<section class='homepage'>
+<h1 class='welcome'>Welcome to Create Receipts.</h1>
+
+<p>Please insert your Issuer name.</p>
+
+<form action="/get-name" method="post">
+  <input type="text" name="product[name]" placeholder="name" >
+  <input class="btn btn-blue" type="submit"  value="submit">
+</form>
+
+<% @products.each do |n| %>
+<%= n.name %>
+<% end %>

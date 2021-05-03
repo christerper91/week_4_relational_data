@@ -1,0 +1,25 @@
+<h1>Issuer :<%= @product.name %> </h1>
+<h4>Product Id :<%= @product.id %> </h4>
+
+
+<p>Please Add Item.</p>
+
+<form action="/add-items/<%= @product.id %>" method="post">
+  <input type="text" name="item[name]" placeholder="item name" >
+  <input type="text" name="item[qty]" placeholder="qty" >
+  <input type="text" name="item[unit_price]" placeholder="unit price" >
+  <input class="btn btn-blue" type="submit"  value="add item">
+</form>
+
+
+<% @items.each do |n| %>
+<h6> Item Name :<%= n.name %> </h6>
+<h6> Qty : <%= n.qty %> </h6>
+<h6> Unit Price : <%= n.unit_price %> </h6>
+<a href="/edit/<%= n.id %>">
+  <button type="button" name="button">Edit</button>
+</a>
+<a href="/delete">
+  <button type="button" name="button">Delete</button>
+</a>
+<% end %>
